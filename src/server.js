@@ -1,7 +1,10 @@
 const app = require("./app");
+const { PORT } = require("./config");
 
-const PORT = process.env.PORT || 8000;
+const NODE_ENV = process.env.NODE_ENV;
 
 app.listen(PORT, () => {
-  console.log(`Server listening at http://localhost:${PORT}`);
+  console.log(
+    `Server listening at http://localhost:${PORT} in mode ${NODE_ENV}`
+  );
 });
